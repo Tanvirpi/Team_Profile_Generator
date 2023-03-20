@@ -34,9 +34,9 @@ THEN I exit the application, and the HTML is generated
 ### Deployed Link
 [Live](https://tanvirpi.github.io/XWeather/)
 
+
 ### Demo Video
 
-![Image](https://github.com/Tanvirpi/Timed-Quiz/blob/main/assets/Screenshot.png)
 
 
 ### References

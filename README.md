@@ -32,11 +32,11 @@ THEN I exit the application, and the HTML is generated
 ```
 
 ### Deployed Link
-[Live](https://tanvirpi.github.io/XWeather/)
+[Live](https://tanvirpi.github.io/Team_Profile_Generator/)
 
 
 ### Demo Video
-
+https://drive.google.com/file/d/1zZEOnwpc8YNoDB2TpxQraptuTm6pbpX9/view?usp=share_link
 
 
 ### References

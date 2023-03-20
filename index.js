@@ -65,70 +65,23 @@ const writeHTML = () => {
     }
 }
 
-// const getEmployeeInfo = (employeeType) => {
-//     let questionsForEmployee = questions;
-//     if (employeeType === 'manager') {
-//         const managerQuestion = {
-//             type: 'input',
-//             message: "what is the manager's office number?",
-//             name: 'officeNumber'
-//         };
-//         questionsForEmployee.push(managerQuestion);
-//         inquirer.prompt(questionsForEmployee).then((answers) => {
-//             const manager = new Manager(
-//                 answers.name, answers.employeeId,
-//                 answers.email, answers.officeNumber);
-//             console.log(`manager: ${JSON.stringify(manager)}`);
-//             writeHtmlFile(manager);
-//         });
-//     } else if (employeeType === 'engineer') {
-//         const engineerQuestion = {
-//             type: 'input',
-//             message: "what is the engineer's github?",
-//             name: 'github'
-//         };
-//         questionsForEmployee.push(engineerQuestion);
-//         inquirer.prompt(questionsForEmployee).then((answers) => {
-//             const employee = new Engineer(
-//                 answers.name, answers.employeeId,
-//                 answers.email, answers.github);
-//             writeHtmlFile(engineer);
-//         });
-//     }
-//         else if (employeeType === 'intern') {
-//             const engineerQuestion = {
-//                 type: 'input',
-//                 message: "what is the intern's school?",
-//                 name: 'github'
-//             };
-//             questionsForEmployee.push(engineerQuestion);
-//             inquirer.prompt(questionsForEmployee).then((answers) => {
-//                 const employee = new Intern(
-//                     answers.name, answers.employeeId,
-//                     answers.email, answers.school);
-//                 writeHtmlFile(intern);
-//             });
-//     }
-// }
-
-
 const main = async () => {
     inquirer.prompt(questions)
         .then(answers => {
             switch (answers.employee_type) {
                 case "Manager":
-                    let myManager = new Manager(answers.name, answers.email, answers.employeeId, answers.officeNumber)
+                    let myManager = new Manager(answers.name, answers.employeeId, answers.email, answers.officeNumber)
                     employees_data.push(myManager)
                     continueAdd();
                     break;
                 case "Intern":
-                    let myIntern = new Intern(answers.name, answers.email, answers.employeeId, answers.school)
+                    let myIntern = new Intern(answers.name, answers.employeeId, answers.email, answers.school)
                     employees_data.push(myIntern)
                     continueAdd();
                     break;
 
                 case "Engineer":
-                    let myEngineer = new Engineer(answers.name, answers.email, answers.employeeId, answers.github)
+                    let myEngineer = new Engineer(answers.name, answers.employeeId, answers.email, answers.github)
                     employees_data.push(myEngineer)
                     continueAdd();
                     break;
@@ -160,5 +113,3 @@ const continueAdd = () => {
 
 main();
 
-
-// writeHTML ();

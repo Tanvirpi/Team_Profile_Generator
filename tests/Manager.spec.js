@@ -1,4 +1,4 @@
-const Manager = require('../Manager.js');
+const Manager = require('../lib/Manager.js');
 
 describe('Manager', () => {
   test('should throw error if render() is called', () => {
